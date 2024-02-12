@@ -20,6 +20,8 @@ public class Progam {
 		
 		System.out.println(seller);
 		
+		System.out.println("----------------------------------------------------------------------------------------------------------------------");
+		
 		
 		System.out.println("=== TEST 2: seller findById ===");
 		Department department = new Department(4, null);
@@ -27,7 +29,16 @@ public class Progam {
 		for(Seller obj : list) {
 			System.out.println(obj);
 		}
-
+		
+		System.out.println("----------------------------------------------------------------------------------------------------------------------"); 
+		
+		System.out.println("=== TEST 3: seller findAll ===");
+		
+		list = sellerDao.findALL(); 
+		for(Seller obj : list) {
+			System.out.println(obj);
+		}
+		
 	}
 
 }
