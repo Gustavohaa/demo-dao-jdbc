@@ -39,11 +39,20 @@ public class Progam {
 			System.out.println(obj);
 		}
 		
-		System.out.println("=== TEST 4: seller insert ===");
-		Seller newSeller = new Seller(null, "Rose", "Rose@gmail.com", new Date(), (double) 4500, department);
-		sellerDao.insert(newSeller);
+		System.out.println("----------------------------------------------------------------------------------------------------------------------"); 
 		
-		System.out.println("Inserted! new id = " + newSeller.getId());
-	}
+		//System.out.println("=== TEST 4: seller insert ===");
+		//Seller newSeller = new Seller(null, "Robert", "Robert@gmail.com", new Date(), (double) 5500, department);
+		//sellerDao.insert(newSeller);
+		
+		//System.out.println("Inserted! new id = " + newSeller.getId());
+	
+		System.out.println("----------------------------------------------------------------------------------------------------------------------"); 
 
+		System.out.println("=== TEST 5: seller update ===");
+		seller = sellerDao.findById(5);
+		seller.setName("Carlinhos");
+		sellerDao.udpate(seller);
+		System.out.println("update completed");
+   }
 }
