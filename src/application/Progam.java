@@ -39,6 +39,11 @@ public class Progam {
 			System.out.println(obj);
 		}
 		
+		System.out.println("=== TEST 4: seller insert ===");
+		Seller newSeller = new Seller(null, "Rose", "Rose@gmail.com", new Date(), (double) 4500, department);
+		sellerDao.insert(newSeller);
+		
+		System.out.println("Inserted! new id = " + newSeller.getId());
 	}
 
 }
